@@ -1,0 +1,15 @@
+https://sql-academy.org/ru/trainer/tasks/37
+SELECT TIMESTAMPDIFF(YEAR, MAX(birthday), NOW()) as year FROM Student 
+
+
+https://sql-academy.org/ru/trainer/tasks/35
+SELECT COUNT(classroom) as count FROM Schedule
+WHERE date = '2019-09-02'
+
+
+https://sql-academy.org/ru/trainer/tasks/60
+SELECT teacher FROM Schedule
+INNER JOIN Class ON class = Class.id
+WHERE Class.name LIKE ('%11%')
+GROUP BY teacher
+HAVING (COUNT(DISTINCT Class.name)) = 2
